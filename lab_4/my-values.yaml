@@ -1,0 +1,12 @@
+replicaCount: 2
+
+service:
+  type: LoadBalancer
+
+serverBlock: |-
+  server {
+    listen 0.0.0.0:8080;
+    location / {
+      return 200 'Hello from Helm lab!\n';
+    }
+  }
